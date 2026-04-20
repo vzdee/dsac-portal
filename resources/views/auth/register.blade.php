@@ -17,24 +17,24 @@
             <div>
                 <x-label for="name" value="{{ __('Name') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required
-                    autofocus autocomplete="name" />
+                    autofocus autocomplete="name" placeholder="Enter your full name" />
             </div>
 
             <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                    required autocomplete="username" />
+                    required autocomplete="username" placeholder="Enter your email" />
             </div>
 
             <div class="mt-4" x-data="{ show: false }">
                 <x-label for="password" value="{{ __('Password') }}" />
                 {{-- componente para ver contraseña --}}
-                <x-password-input name="password" id="password" class="mt-1" required />
+                <x-password-input name="password" id="password" class="mt-1" required autocomplete="new-password" placeholder="Enter your password" />
             </div>
             {{-- componente para confirmar contraseña --}}
             <div class="mt-4">
                 <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-password-input name="password_confirmation" id="password_confirmation" class="mt-1" required />
+                <x-password-input name="password_confirmation" id="password_confirmation" class="mt-1" required autocomplete="new-password" placeholder="Confirm your password"/>
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -71,7 +71,7 @@
                 </a>
             </div>
             <div class="mt-8 flex items-center justify-center">
-                <x-button class="w-full flex items-center justify-center ms-4">
+                <x-button class="w-full flex items-center justify-center">
                     {{ __('Register') }}
                 </x-button>
             </div>

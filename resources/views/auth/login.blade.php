@@ -25,12 +25,12 @@
             <div>
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                    required autofocus autocomplete="username" placeholder="example@email.com" />
+                    required autofocus autocomplete="username" placeholder="Enter your email" />
             </div>
 
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
-                <x-password-input name="password" id="password" class="mt-1" required autocomplete="current-password" />
+                <x-password-input name="password" id="password" class="mt-1" required autocomplete="current-password" placeholder="Enter your password"/>
             </div>
 
             <div class="block mt-4">
@@ -55,7 +55,7 @@
                 @endif
             </div>
             <div class="mt-8 flex items-center justify-center">
-                <x-button class="w-full flex items-center justify-center ms-4">
+                <x-button class="w-full flex items-center justify-center">
                     {{ __('Log in') }}
                 </x-button>
             </div>

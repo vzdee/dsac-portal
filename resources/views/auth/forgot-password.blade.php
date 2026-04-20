@@ -37,7 +37,7 @@
             </div>
 
             <div class="mt-8 flex items-center justify-center">
-                <x-button class="w-full flex items-center justify-center ms-4">
+                <x-button class="w-full flex items-center justify-center">
                     {{ __('Email Password Reset Link') }}
                 </x-button>
             </div>
